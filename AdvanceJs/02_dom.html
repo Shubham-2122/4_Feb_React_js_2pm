@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+    <h1 id="h1"></h1>
+    <h2 id="h2"></h2>
+
+    <!-- internal js -->
+     <script>
+        // 1) conole
+        console.log("Hello")
+
+        // 2) document.write
+
+        // document.writeln("Hello shubham jadav")
+        // document.writeln("<br> Jigar sir")
+
+        // 3) dom getelement id
+
+        console.log(document.getElementById("h1"))
+        // only for text allow
+        document.getElementById("h1").innerText = "<i>Hello shubham jadav</i>"
+
+        // text and html both allow
+        console.log(document.getElementById("h2"))
+        document.getElementById("h2").innerHTML = "<i>Hellp manthan patel</i>"
+
+
+     </script>
+
+</body>
+</html>
