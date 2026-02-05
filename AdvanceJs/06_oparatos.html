@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <!-- 1) assigement 
+    2) arithmaic
+    3) comparization (==,===,>,<,>=,<=,!=)
+    4) logical 
+        && 
+            T T = T 
+            T F = F
+            F T = F
+            F F = F
+        
+        || 
+            T T = T
+            T F = T 
+            F T = T
+            F F = F 
+        !
+            !(true) = false
+            !(false) = true
+    5) ternary
+        ()?true:false 
+    6) inc /dec 
+         -->
+
+    <script>
+
+        // assigement
+        let x = 20.45
+        let y = 10
+
+        // arithmatic
+        console.log("sum : ", x + y)
+        console.log("sub : ", x - y)
+        console.log("mul : ", x * y)
+        console.log("divi : ", x / y)
+
+        let result = (x > y) ? true : false
+        console.log(result)
+        console.log((x < y) ? true : false)
+
+        console.log((x > y) ? x : y)
+        console.log((x < y) ? x : y)
+
+        let a = 10, b = '10'
+
+        // value
+        console.log((a == b) ? true : false)
+
+        // datatype and value
+        console.log((a === b) ? true : false)
+
+
+        sum = a+b
+        console.log(sum)
+
+
+        // inc /dec
+        // pres inc ++value 
+        // post inc value++
+        a++  
+        console.log("a : ",a) //11
+        ++a
+        console.log("a : ",a)//12
+        console.log("a : ",a++) //12 // 13
+        console.log("a : ",++a) //14
+        console.log("a : ",a++)
+        console.log("a : ",a++)
+        console.log("a : ",++a)
+        console.log("a : ",a++)
+        console.log("a : ",a++)
+        console.log("a : ",++a)
+        console.log("a : ",a++)
+        console.log("a : ",a)
+
+        console.log("a : ",--a)
+        console.log("a : ",a--)
+        console.log("a : ",a)
+
+
+    </script>
+
+</body>
+
+</html>
