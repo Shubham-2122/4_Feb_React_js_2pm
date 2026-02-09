@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        /* h1{
+            font-size: ;
+        } */
+    </style>
+</head>
+<body>
+    <h1 id="h1" onmouseenter="demo()" onmouseleave="demo2()">Hello this data</h1>
+    <button onclick="demo()">Change style</button>
+
+    <!-- js : style sheet  -->
+    <script>
+
+        let h1_tag = document.getElementById("h1")
+        console.log(h1_tag)
+
+        function demo(){
+            h1_tag.style.background = "red"
+            h1_tag.style.color = "white"
+        }
+
+        function demo2(){
+            h1_tag.style.background = "white";
+            h1_tag.style.color = "black"
+            h1_tag.style.fontSize = "70px"
+        }
+    </script>
+</body>
+</html>

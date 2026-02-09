@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .data{
+            border: 2px solid;
+            padding: 40px;
+            background: linear-gradient(red,green,blue);
+            color: white;
+            font-size: 50px;
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <button onclick="demo()">Add css</button>
+    <button onclick="demo2()">Remove css</button>
+    <button onclick="ToggleData()">Toggle</button>
+
+    <div id="main">Hello Website Design</div>
+
+    <script>
+
+        let main_tag = document.getElementById("main")
+
+        function demo(){
+            main_tag.classList.add("data")
+        }
+
+        function demo2(){
+            main_tag.classList.remove("data")
+        }
+
+        function ToggleData(){
+            main_tag.classList.toggle("data")
+        }
+
+    </script>
+
+</body>
+</html>

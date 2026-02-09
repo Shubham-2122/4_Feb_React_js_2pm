@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <form action="" onsubmit="return validation()">
+        <table>
+            <tr>
+                <td><input type="text" placeholder="Enter you name" id="nm"></td>
+                <td><span id="nmerr"></span></td>
+            </tr>
+            <tr>
+                <td><input type="email" placeholder="Enter you email" id="em"></td>
+                <td><span id="emerr"></span></td>
+            </tr>
+            <tr>
+                <td><input type="tel" placeholder="Enter you phone" id="ph"></td>
+                <td><span id="pherr"></span></td>
+            </tr>
+            <tr>
+                <td><input type="password" placeholder="Enter you password" id="psw"></td>
+                <td><span id="pswerr"></span></td>
+            </tr>
+            <tr>
+                <td><input type="password" placeholder="Enter you Cpassword" id="cpsw"></td>
+            </tr>
+            <tr>
+                <td><input type="submit"></td>
+            </tr>
+        </table>
+    </form>
+
+    <script>
+        let name_tag = document.getElementById("nm")
+        let nm_err = document.getElementById("nmerr")
+
+        let email_tag = document.getElementById("em")
+        let em_err = document.getElementById("emerr")
+
+        let phone_tag = document.getElementById("ph")
+        let ph_err = document.getElementById("pherr")
+
+        let pass_tag = document.getElementById("psw")
+        let pass_err = document.getElementById("pswerr")
+
+        let cpss = document.getElementById("cpsw")
+
+        function validation(){
+            if(name_tag.value == "" || name_tag.value == null){
+                nm_err.innerHTML = "pls name required.."
+                nm_err.style.color = "red";
+                return false
+            }
+            else{
+                nm_err.innerHTML = ""
+            }
+
+            if(email_tag.value == "" || email_tag.value == null){
+                em_err.innerHTML = "pls Email required.."
+                em_err.style.color = "red";
+                return false
+            }
+            else{
+                em_err.innerHTML = ""
+            }
+            
+            if(phone_tag.value == "" || phone_tag.value == null){
+                ph_err.innerHTML = "pls phone required.."
+                ph_err.style.color = "red";
+                return false
+            }
+            else{
+                ph_err.innerHTML = ""
+            }
+            
+             if(pass_tag.value == "" || pass_tag.value == null){
+                pass_err.innerHTML = "pls password required.."
+                pass_err.style.color = "red";
+                return false
+            }
+            else{
+                pass_err.innerHTML = ""
+            }
+
+            if(pass_tag.value != cpss.value)
+            {
+                alert("Password does not matcg..")
+                return false
+            }
+
+        }
+
+    </script>
+
+</body>
+
+</html>
