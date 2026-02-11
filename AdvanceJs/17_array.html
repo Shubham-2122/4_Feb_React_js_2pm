@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <!-- array : collection of multiple value store in single varibale 
+        [] 
+        primitive allow 
+        index start 0
+
+        synatx : 
+            let data = [1,2,4,"sdnh",45]
+    -->
+
+    <script>
+
+        let arrdata = [1,2,3,"shubham","net",5,6,7,8]
+        console.log(arrdata)
+
+        // arrr[indexnum]
+        // console.log(arrdata[3])
+        // document.writeln(arrdata[3])
+
+        //1 simple for loop
+        // for(let index = 0 ; index < arrdata.length ; index++){
+        //     // console.log(index)
+        //     console.log(arrdata[index])
+        //     document.writeln("<br>",arrdata[index])
+        // }
+
+        // 2) for of : value
+
+        // for(let data of arrdata){
+        //     console.log(data)
+        //     document.writeln(data,"<br>")
+        // }
+
+        // 3) for in : index , value
+        // for(let data in arrdata){
+        //     // console.log(data)
+        //     console.log(arrdata[data])
+        // }
+
+
+        // 4) forEach 
+
+        arrdata.forEach(function(value,index){
+            // console.log(value)
+            // console.log(index)
+            document.writeln(`<p>${index} : ${value}</p>`)
+        })
+
+    </script>
+</body>
+</html>
