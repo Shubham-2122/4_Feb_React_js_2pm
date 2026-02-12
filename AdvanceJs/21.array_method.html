@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+
+        let arr = [1,2,3,4,5]
+        console.log(arr)
+
+        // 1 length
+        console.log(arr.length)
+
+        // 2) forEach method 
+
+        // push : after array
+        arr.push(6)
+        console.log(arr)
+
+        // pop :  array after remove 
+        arr.pop()
+        console.log(arr)
+
+        // before array add
+        arr.unshift(0)
+        console.log(arr)
+
+        // arr.shift
+        arr.shift()
+        console.log(arr)
+
+        // arr revser 
+        console.log(arr.reverse())
+
+        const color = ["red","green","blue","orange","darkGray","pink"]
+        console.log(color)
+
+        const result = color.filter((data) => data.length > 4 )
+        console.log(result)
+
+        const arr1 = [6,7,8,9,10]
+
+        console.log(arr.concat(arr1))
+
+        const elements = ["Fire", "Air", "Water"];
+
+        console.log(elements.join())
+        console.log(elements.join(""))
+        console.log(elements.join("-"))
+
+        const animals = ["ant", "bison", "camel", "duck", "elephant"];
+
+        console.log(animals)
+        console.log(animals.slice(2))
+        console.log(animals.slice(1,4))
+        
+    </script>
+</body>
+</html>
