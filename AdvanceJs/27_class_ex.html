@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+
+        class Xy{
+            // 1) store function withot paramter
+            x = function sum(){
+                let a = 30
+                let b = 20
+                console.log("sum : ",a+b)
+            }
+
+            // 2) store function with paramter
+            y = function sub(a,b){
+                console.log("sub : ",a-b)
+            }
+        
+            // 3) without store function withot paramter
+            mul(){
+                let a = 40
+                let b=20
+                console.log("Mul : ",a*b)
+            }
+       
+            // 4)  without store function with paramter
+            divi(a,b){
+                console.log("divi : ",a/b)
+            }
+        }
+
+        const data = new Xy;
+        console.log(data)
+
+        data.mul()
+        data.divi(50,10)
+        data.y(50,20)
+
+    </script>
+</body>
+</html>

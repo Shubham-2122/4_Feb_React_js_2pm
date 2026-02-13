@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+
+    <!-- Static by defult :  -->
+
+    <script>
+
+        class Data {
+            constructor() {
+                console.log("Constructor call")
+            }
+            x = function data() {
+                console.log("X function")
+            }
+            y = function data1() {
+                console.log("Y Function")
+            }
+            static demo() {
+                console.log("Static data")
+            }
+
+        }
+
+        const data = new Data
+        
+        Data.demo()
+
+    </script>
+</body>
+
+</html>

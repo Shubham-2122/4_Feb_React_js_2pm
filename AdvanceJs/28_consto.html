@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+    <!-- cons : inbulit method class
+        : Automac call , new Object creted class : Show Data first
+        : Opration,function coman 
+         A class may only have one constructor
+    -->
+
+    <script>
+
+        class Data {
+            constructor() {
+                console.log("Constructor call")
+            }
+            x = function data() {
+                console.log("X function")
+            }
+            y = function data1() {
+                console.log("Y Function")
+            }
+            // constructor(){
+            //     console.log("hello")
+            // }
+
+        }
+        // console.log(Data)
+
+        const user = new Data;
+        user.x()
+
+    </script>
+</body>
+
+</html>
