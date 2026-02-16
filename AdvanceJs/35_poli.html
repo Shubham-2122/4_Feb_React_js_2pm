@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <!-- method overloading (complie) : class inside function name same but deffernt paramter 
+     
+        method overriding (run): deffernt class inside same name function
+    -->
+
+    <script>
+
+        // class Load{
+        //     data(a){
+        //         console.log("a : ",a)
+        //     }
+        //     data(a,b){
+        //         console.log("Sum : ",a+b)
+        //     }
+        //     data(a,b){
+        //         console.log("Sub : ",a-b)
+        //     }
+        // }
+
+        // const user = new Load
+        // console.log(user)
+        // user.data(20,10)
+
+        class A {
+            details() {
+                console.log("A class")
+            }
+        }
+        class B extends A {
+            details() {
+                console.log("B class")
+            }
+        }
+        class C extends B {
+            details() {
+                console.log("C class")
+            }
+        }
+
+        // const user = new C 
+        // console.log(user)
+
+        // user.details()
+        // user.details()
+
+        const data = [new A,new B,new C]
+
+        data.forEach((user,index)=>{
+            user.details()
+        })
+
+    </script>
+
+</body>
+
+</html>

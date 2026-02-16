@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <!-- 5 type inhritance :
+    1) single : a - b 
+    2) multi level : a -b - c 
+    3) muliple  :  A - c , B - c : not working
+    4) hyrachical : A - B , A - C
+    5) hybrid : any two inhritance combine  -->
+
+    <!-- extens : property pass  -->
+
+    <!-- class A 
+     
+        Class B  {
+        }
+        -->
+
+    <script>
+
+        class A{
+            x = function data(){
+                console.log("A class")
+            }
+        }
+
+        class B extends A {
+            y = function data1(){
+                console.log("B class")
+            }
+        }
+
+        const data = new B 
+        data.x()
+        data.y()
+
+    </script>
+
+</body>
+</html>

@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+    <!-- Enc and Absr :  -->
+
+    <script>
+
+        function Person(name, age) {
+
+            // Encu
+            // private member
+            let _name = name;
+            let _age = age;
+
+            // Absr
+            this.GetNane = () => {
+                return _name;
+            }
+
+            // Absr
+            this.getAge = () => {
+                return _age;
+            }
+
+            this.setAge = (newage) => {
+                if (newage) {
+                     return _age = newage;
+                }
+                else{
+                    return _age;
+                }
+            }
+
+        }
+
+
+        const user = new Person("Manthan", 25)
+        console.log(user._name)
+        console.log(user._age)
+
+        console.log(user.GetNane())
+        console.log(user.getAge())
+
+        user.setAge(27)
+       console.log(user.getAge())
+
+    </script>
+
+</body>
+
+</html>
