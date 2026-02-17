@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+
+        let fullname = {
+            data : function demo(city,state){
+                console.log(`first name : ${this.firstname} lastname : ${this.lastname} city : ${city} state : ${state}`)
+            },
+            age : 21
+        }
+
+        let person = {
+            firstname : "Manthan",
+            lastname : "Patel"
+        }
+
+        let perosn1 = {
+            firstname :"shubham",
+            lastname : "jadav"
+        }
+
+        // call method spreate argument
+        fullname.data.call(person,"surat","gujarat")
+
+        // apply method as array argument
+        fullname.data.apply(perosn1,["bharuch","gujarat"])
+
+    </script>
+</body>
+</html>

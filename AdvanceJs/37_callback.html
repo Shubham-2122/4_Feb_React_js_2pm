@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <!-- callback : function outside call inside function call 
+             : delete , update ,view -->
+
+    <!-- settime,settinter -->
+
+    <script>
+
+        function outside(){
+            demo()
+            console.log("hello")
+        }
+
+        function demo()
+        {
+            console.log("hello demo")
+        }
+
+        outside()
+
+        setInterval(demo,1000)
+        setInterval(()=>{
+            console.log("Hello interval ...")
+        },2000)
+
+    </script>
+
+
+</body>
+</html>
