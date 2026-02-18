@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <!-- json : javascript object noataion
+    
+    json : direct js not read 
+    json : ligh wight 
+    json : easy use and read
+    josn : string data
+    
+    let object = [{
+        name : "Shubham",
+        age : 26,
+        course : "Front-end"
+    }]
+
+    let jsondata = `[{
+        "name" : "shubham",
+        "age" : 26,
+        "Coruse" : "front-end"
+    }]`
+
+    -->
+
+    <script>
+
+        let jsondata = `[
+            {
+                "id":"1",
+                "name" : "Shubham",
+                "course":"Front-end"
+            },
+            {
+                "id":"2",
+                "name" : "manthan",
+                "course":"back-end"
+            },
+            {
+                "id":"3",
+                "name" : "Sujal",
+                "course":"full-stack"
+            }
+        ]`
+
+        console.log(jsondata)
+       
+        // stringjson => object/array
+        let data = JSON.parse(jsondata)
+        console.log(data)
+
+        for(let user of data){
+            console.log(user)
+            document.writeln(`<h3>id : ${user.id} name : ${user.name} course : ${user.course}</h3>`)
+        }
+
+        let object = [
+            {
+                id : "1",
+                name : "het"
+            },
+            {
+                id : "2",
+                name : "varj"
+            },
+            {
+                id : "3",
+                name : "harshil"
+            }
+        ]
+
+        console.log(object)
+
+        // objecr/array  => json string
+        let json = JSON.stringify(object)
+        console.log(json)
+
+
+    </script>
+
+</body>
+</html>

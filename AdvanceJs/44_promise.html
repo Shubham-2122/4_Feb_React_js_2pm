@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <!-- promise : it is object new 
+        Res,err
+
+    1) pending : hold data . show pending
+    2) fullfield : Competed state data 
+    3) rejected : error , api ,network
+
+    -->
+
+    <script>
+        // 1) pending
+
+        let pro = new Promise(function(res,err){
+            let data = 10
+            if(data == 11){
+                res("success data..")
+            }
+            else{
+                err("rejeted value..")
+            }
+        })
+        console.log(pro)
+
+
+    </script>
+
+
+</body>
+</html>

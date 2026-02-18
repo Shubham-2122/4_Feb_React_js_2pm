@@ -1,0 +1,40 @@
+{
+    "user": [
+        {
+            "id": 1,
+            "name": "shubham",
+            "coruse": "front-end",
+            "age": 26
+        },
+        {
+            "id": 2,
+            "name": "sujal",
+            "coruse": "back-end",
+            "age": 23
+        },
+        {
+            "id": 3,
+            "name": "Manthan",
+            "coruse": "MERN-stcak",
+            "age": 26
+        },
+        {
+            "id": 4,
+            "name": "jigar",
+            "coruse": "python",
+            "age": 42
+        }
+    ],
+    "admin":[
+        {
+            "id":1,
+            "name":"admin",
+            "coruse":"Product"
+        },
+         {
+            "id":2,
+            "name":"subadmin",
+            "coruse":"mobile data"
+        }
+    ]
+}

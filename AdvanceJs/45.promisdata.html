@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+
+        function ouput(res){
+            console.log(res)
+        }
+
+        let prodata = new Promise((success,err)=>{
+            if(!success){
+                success("Data show")
+            }
+            else{
+                err("Data not Show")
+            }
+        })
+        .then((data)=>{
+            ouput(data)
+        })
+        .catch((err)=>{
+            ouput(err)
+        })
+
+        
+        
+
+        console.log(prodata)
+
+    </script>
+</body>
+</html>

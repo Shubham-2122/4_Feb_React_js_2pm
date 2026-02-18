@@ -1,0 +1,26 @@
+[
+    {
+        "id":1,
+        "name":"shubham",
+        "coruse":"front-end",
+        "age":26
+    },
+    {
+        "id":2,
+        "name":"sujal",
+        "coruse":"back-end",
+        "age":23
+    },
+    {
+        "id":3,
+        "name":"Manthan",
+        "coruse":"MERN-stcak",
+        "age":26
+    },
+    {
+        "id":4,
+        "name":"jigar",
+        "coruse":"python",
+        "age":42
+    }
+]

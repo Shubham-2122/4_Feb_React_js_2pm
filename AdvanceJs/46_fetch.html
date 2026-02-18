@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <!-- fetch : inbulit js : back-end data show -->
+
+    <!-- get : show 
+    post : new data
+    delete : remove data 
+    put/patch : update data
+    
+    fetch('path',{
+        method:"GET"
+    })
+    .then(()=>{
+        convert string/object/array
+    })
+    .then(()=>{
+        data show
+    })
+    .catch(()=>{
+    e   rror message
+    })
+
+    -->
+
+    <h1 id="h1"></h1>
+
+    <script>
+
+        // console.log(fetch())
+
+        fetch('data.txt',{
+            method:"GET"
+        })
+        .then((res)=>{
+            // promise text file convert string data
+            return res.text()
+        })
+        .then((data)=>{
+            console.log(data)
+            // document.write(data)
+            document.getElementById("h1").innerHTML = data
+        })
+        
+
+    </script>
+
+</body>
+</html>
