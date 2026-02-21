@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://cdn.jsdelivr.net/npm/axios@1.13.2/dist/axios.min.js"></script>
+    <script src="https://unpkg.com/axios@1.13.2/dist/axios.min.js"></script>
+</head>
+
+<body>
+    <script>
+
+        // function demo() {
+        //     fetch("https://660d95e36ddfa2943b34c530.mockapi.io/users", {
+        //         method: "GET"
+        //     })
+        //         .then((res) => {
+        //             return res.json()
+        //         })
+        //         .then((data) => {
+        //             console.log(data)
+        //         })
+        //         .catch((err) => {
+        //             console.log(err)
+        //         })
+        // }
+
+        // demo()
+
+
+        // axios : it Back end data show in front-end 
+        //  it's 3rd party lib
+
+        const getdata = async () => {
+            try {
+                const res = await axios.get("https://660d95e36ddfa2943b34c530.mockapi.io/users")
+                console.log(res.data)
+                for(let data of res.data){
+                    console.log(data)
+                }
+            } catch (error) {
+                console.log("error data",error)
+            }
+        }
+        getdata()
+
+
+    </script>
+</body>
+
+</html>
