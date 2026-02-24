@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://cdn.jsdelivr.net/npm/axios@1.13.2/dist/axios.min.js"></script>
+    <script src="https://unpkg.com/axios@1.13.2/dist/axios.min.js"></script>
+</head>
+
+<body>
+    <script>
+
+        // const getdata = async () => {
+        //     try {
+        //         const res = await axios.get("https://660d95e36ddfa2943b34c530.mockapi.io/users")
+        //         console.log(res.data)
+        //         for(let data of res.data){
+        //             console.log(data)
+        //         }
+        //     } catch (error) {
+        //         console.log("error data",error)
+        //     }
+        // }
+        // getdata()
+
+        // new data
+
+        let person = {
+            name : "manthan",
+            surname:"patel",
+            cityName : "surat",
+            mobile:"86758577"
+        }
+
+
+        const newUser =async()=>{
+            try {
+                const res = await axios.post("https://660d95e36ddfa2943b34c530.mockapi.io/users",person)
+                console.log(res)
+                console.log(res.data)
+            } catch (error) {
+                console.log("error data",error)
+            }
+        }
+        // newUser()
+
+        // delete user
+
+        const deleteUser =async()=>{
+            try {
+                const res = await axios.delete(`https://660d95e36ddfa2943b34c530.mockapi.io/users/7`)
+                console.log(res)
+            } catch (error) {
+                  console.log("error data",error)
+            }
+        }
+
+        // deleteUser()
+
+        // edituser
+        let Perosn1={
+            id : 3,
+            name : "jigar",
+            surname : "thakkr",
+            mobile:"376768876" 
+        }
+
+        const EditUser = async()=>{
+            try {
+                const res = await axios.put(`https://660d95e36ddfa2943b34c530.mockapi.io/users/${Perosn1.id}`,Perosn1)
+                console.log(res)
+            } catch (error) {
+                console.log("error data",error)
+            }
+        }
+
+        EditUser()
+
+
+    </script>
+</body>
+
+</html>
