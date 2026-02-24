@@ -1,0 +1,51 @@
+React : lib js
+
+Single page 
+Compoenet 
+Dom : virtual 
+
+Node : Run-time env 
+     : chrome,s,mic : same
+
+node install 
+24.11.1
+24.11.5
+24.14.6
+
+25.1.2
+
+1) core module : http,file 
+2) custom module : compoenent 
+3) global module : bootstrap,axios
+
+npm : node package manager
+
+npm gloabl vs npx localhost
+
+react install 
+cmd : npx create-react-app app-name
+cmd : cd app-name
+cmd : npm start
+
+
+vite+react
+cmd : npm create vite@latest my-react-app
+cmd : cd my-react-app
+cmd : npm run dev
+
+
+old react folder stru
+1) node module : npm install
+2) Public: index.html , static : img
+3) src : index.js ,App.js
+4) package-lock.json , package.json
+
+vite+ react folder stru
+
+
+
+
+
+
+
+
