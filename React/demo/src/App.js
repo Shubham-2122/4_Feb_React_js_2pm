@@ -1,5 +1,9 @@
 import React from "react";
-import MainState from "./State/MainState";
+// import MainState from "./State/MainState";
+// import FormData from "./formHadling/FormData";
+// import FormObj from "./formHadling/FormObj";
+import EffectData from "./Effect/EffectData";
+import UserEffect from "./Effect/UserEffect";
 // import MainProps from "./Props/MainProps";
 // import Css from "./Css/Css";
 // import ClassCompo from "./Compoenent/ClassCompo";
@@ -26,7 +30,16 @@ function App(){
             {/* Props */}
             {/* <MainProps /> */}
 
-            <MainState />
+        {/* state */}
+            {/* <MainState /> */}
+            
+            {/* <FormData /> */}
+            {/* <FormObj /> */}
+
+            {/* <EffectData /> */}
+
+            <UserEffect />
+
         </div>
     )
 }
