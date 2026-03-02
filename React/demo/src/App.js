@@ -4,6 +4,8 @@ import React from "react";
 // import FormObj from "./formHadling/FormObj";
 import EffectData from "./Effect/EffectData";
 import UserEffect from "./Effect/UserEffect";
+import UserData from "./Effect/UserData";
+import CardData from "./Effect/CardData";
 // import MainProps from "./Props/MainProps";
 // import Css from "./Css/Css";
 // import ClassCompo from "./Compoenent/ClassCompo";
@@ -37,8 +39,9 @@ function App(){
             {/* <FormObj /> */}
 
             {/* <EffectData /> */}
-
-            <UserEffect />
+            {/* <UserEffect /> */}
+            {/* <UserData /> */}
+            <CardData />
 
         </div>
     )
