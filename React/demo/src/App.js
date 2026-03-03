@@ -2,10 +2,11 @@ import React from "react";
 // import MainState from "./State/MainState";
 // import FormData from "./formHadling/FormData";
 // import FormObj from "./formHadling/FormObj";
-import EffectData from "./Effect/EffectData";
-import UserEffect from "./Effect/UserEffect";
-import UserData from "./Effect/UserData";
-import CardData from "./Effect/CardData";
+// import EffectData from "./Effect/EffectData";
+// import UserEffect from "./Effect/UserEffect";
+// import UserData from "./Effect/UserData";
+// import CardData from "./Effect/CardData";
+import MainContext from "./Context/MainContext";
 // import MainProps from "./Props/MainProps";
 // import Css from "./Css/Css";
 // import ClassCompo from "./Compoenent/ClassCompo";
@@ -41,8 +42,10 @@ function App(){
             {/* <EffectData /> */}
             {/* <UserEffect /> */}
             {/* <UserData /> */}
-            <CardData />
+            {/* <CardData /> */}
 
+            {/* Usecontext */}
+            <MainContext />
         </div>
     )
 }
