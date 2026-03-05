@@ -7,6 +7,9 @@ import React from "react";
 // import UserData from "./Effect/UserData";
 // import CardData from "./Effect/CardData";
 import MainContext from "./Context/MainContext";
+import Boot from "./Design/Boot";
+import CardReact from "./Design/CardReact";
+import FooterData from "./Design/FooterData";
 // import MainProps from "./Props/MainProps";
 // import Css from "./Css/Css";
 // import ClassCompo from "./Compoenent/ClassCompo";
@@ -45,7 +48,14 @@ function App(){
             {/* <CardData /> */}
 
             {/* Usecontext */}
-            <MainContext />
+            {/* <MainContext /> */}
+
+            {/* design */}
+            {/* <Boot /> */}
+            <CardReact />
+
+            <FooterData />
+
         </div>
     )
 }
