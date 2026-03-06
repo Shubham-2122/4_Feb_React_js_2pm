@@ -6,57 +6,79 @@ import React from "react";
 // import UserEffect from "./Effect/UserEffect";
 // import UserData from "./Effect/UserData";
 // import CardData from "./Effect/CardData";
-import MainContext from "./Context/MainContext";
-import Boot from "./Design/Boot";
-import CardReact from "./Design/CardReact";
-import FooterData from "./Design/FooterData";
+// import MainContext from "./Context/MainContext";
+// import Boot from "./Design/Boot";
+// import CardReact from "./Design/CardReact";
+// import FooterData from "./Design/FooterData";
+import { BrowserRouter, Route, Routes } from "react-router-dom";
+import Home from "./Layout/Pages/Home";
+import About from "./Layout/Pages/About";
+import Contact from "./Layout/Pages/Contact";
+import About1 from "./Layout/Pages/About1";
+import About2 from "./Layout/Pages/About2";
 // import MainProps from "./Props/MainProps";
 // import Css from "./Css/Css";
 // import ClassCompo from "./Compoenent/ClassCompo";
 // import FuncCompo from "./Compoenent/FuncCompo";
 // import Hello from "./Jsx/Hello";
 
-function App(){
-    return(
-        <div>
-            <h1>Hello this App Data</h1>
+function App() {
+    return (
+        <BrowserRouter >
+            <div>
+                {/* <h1>Hello this App Data</h1> */}
 
-            {/* compoenent */}
-            {/* <ClassCompo /> */}
-            {/* <ClassCompo /> */}
-            {/* <FuncCompo /> */}
-            {/* <FuncCompo /> */}
+                {/* compoenent */}
+                {/* <ClassCompo /> */}
+                {/* <ClassCompo /> */}
+                {/* <FuncCompo /> */}
+                {/* <FuncCompo /> */}
 
-            {/* jsx file */}
-            {/* <Hello /> */}
+                {/* jsx file */}
+                {/* <Hello /> */}
 
-            {/* css file */}
-            {/* <Css /> */}
+                {/* css file */}
+                {/* <Css /> */}
 
-            {/* Props */}
-            {/* <MainProps /> */}
+                {/* Props */}
+                {/* <MainProps /> */}
 
-        {/* state */}
-            {/* <MainState /> */}
-            
-            {/* <FormData /> */}
-            {/* <FormObj /> */}
+                {/* state */}
+                {/* <MainState /> */}
 
-            {/* <EffectData /> */}
-            {/* <UserEffect /> */}
-            {/* <UserData /> */}
-            {/* <CardData /> */}
+                {/* <FormData /> */}
+                {/* <FormObj /> */}
 
-            {/* Usecontext */}
-            {/* <MainContext /> */}
+                {/* <EffectData /> */}
+                {/* <UserEffect /> */}
+                {/* <UserData /> */}
+                {/* <CardData /> */}
 
-            {/* design */}
-            {/* <Boot /> */}
-            <CardReact />
+                {/* Usecontext */}
+                {/* <MainContext /> */}
 
-            <FooterData />
+                {/* design */}
+                {/* <Boot /> */}
+                {/* <CardReact /> */}
 
-        </div>
+                {/* <FooterData /> */}
+
+
+                <Routes>
+
+                    <Route path="/" element={<Home />} />
+                    <Route path="/about" element={<About />} >
+                        <Route path="about1" element={<About1 />} />
+                        <Route path="about2" element={<About2 />} />
+                    </Route>
+
+                    <Route path="/contact" element={<Contact />} />
+
+                </Routes>
+
+
+            </div>
+        </BrowserRouter>
     )
 }
 export default App;
