@@ -16,6 +16,9 @@ import About from "./Layout/Pages/About";
 import Contact from "./Layout/Pages/Contact";
 import About1 from "./Layout/Pages/About1";
 import About2 from "./Layout/Pages/About2";
+import NotFound from "./Layout/Pages/NotFound";
+import Life from "./Hooks/Life";
+import ReffData from "./Hooks/ReffData";
 // import MainProps from "./Props/MainProps";
 // import Css from "./Css/Css";
 // import ClassCompo from "./Compoenent/ClassCompo";
@@ -73,6 +76,10 @@ function App() {
                     </Route>
 
                     <Route path="/contact" element={<Contact />} />
+                    <Route path="/life" element={<Life />} />
+                    <Route path="/ref" element={<ReffData />} />
+
+                    <Route path="*" element={<NotFound />} />
 
                 </Routes>
 
