@@ -1,5 +1,60 @@
 @import "tailwindcss";
 
-body{
+/* body{
   background-color: lightgray;
+} */
+
+/* base : any tag apply  */
+
+@layer base {
+  h1 {
+    /* 21 start 49 px */
+    font-size: clamp(20px, 5.6vw, 50px);
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+  }
+}
+
+@layer components {
+  .btn {
+    padding: 10px 20px;
+    border: 4px solid;
+    border-radius: 10px;
+    background: linear-gradient(red, green, blue);
+  }
+
+  .btn:hover {
+    background: lightcoral;
+    color: white;
+  }
+
+  .btn1 {
+    padding: 5px 20px;
+    border: 4px solid;
+    border-radius: 10px;
+    background: blue;
+  }
+
+  .btn1:hover {
+    background: lightcoral;
+    color: white;
+  }
+
+  #card {
+    height: 300px;
+    width: 200px;
+    border: 2px solid;
+    box-shadow: 5px 5px 10px black;
+  }
+}
+
+@layer utilities{
+  .font{
+    font-family: 'Times New Roman', Times, serif;
+  }
+  .data{
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+  }
+  .padd{
+    padding: 50px;
+  }
 }
