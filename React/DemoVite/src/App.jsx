@@ -3,6 +3,11 @@ import Back from './Data/Back'
 import Font from './Data/Font'
 import Flex from './Data/Flex'
 import Data from './Data/Data'
+import RedcerData from './Hooks/RedcerData'
+import Counter from './Counter'
+import UserApi from './UserApi'
+import ProductApi from './ProductApi'
+import UserMemo from './Hooks/UserMemo'
 
 function App() {
   return (
@@ -10,7 +15,16 @@ function App() {
      {/* <Back /> */}
      {/* <Font /> */}
      {/* <Flex /> */}
-     <Data />
+     {/* <Data />  */}
+     {/* <RedcerData /> */}
+     {/* <Counter /> */}
+
+    {/* <UserApi /> */}
+
+    {/* <ProductApi /> */}
+
+    <UserMemo />
+
     </div>
   )
 }
