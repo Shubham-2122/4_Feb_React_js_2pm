@@ -20,18 +20,18 @@ function Header() {
                                     <NavLink to="/" className="nav-item nav-link ">Home</NavLink>
                                     <NavLink to="/about" className="nav-item nav-link">About</NavLink>
                                     <NavLink to="/service" className="nav-item nav-link">Services</NavLink>
-                                    <a href="event.html" className="nav-item nav-link">Events</a>
-                                    <a href="menu.html" className="nav-item nav-link">Menu</a>
+                                    <NavLink to="/event" className="nav-item nav-link">Events</NavLink>
+                                    <NavLink  to="/menu" className="nav-item nav-link">Menu</NavLink>
                                     <div className="nav-item dropdown">
                                         <a href="#" className="nav-link dropdown-toggle" data-bs-toggle="dropdown">Pages</a>
                                         <div className="dropdown-menu bg-light">
-                                            <a href="book.html" className="dropdown-item">Booking</a>
-                                            <a href="blog.html" className="dropdown-item">Our Blog</a>
-                                            <a href="team.html" className="dropdown-item">Our Team</a>
-                                            <a href="testimonial.html" className="dropdown-item">Testimonial</a>
+                                            <NavLink to="/book" className="dropdown-item">Booking</NavLink>
+                                            <NavLink to="/blog" className="dropdown-item">Our Blog</NavLink>
+                                            <NavLink to="/team" className="dropdown-item">Our Team</NavLink>
+                                            <NavLink to="/test" className="dropdown-item">Testimonial</NavLink>
                                         </div>
                                     </div>
-                                    <a href="contact.html" className="nav-item nav-link">Contact</a>
+                                    <NavLink to="/contact" className="nav-item nav-link">Contact</NavLink>
                                 </div>
                                 <button className="btn-search btn btn-primary btn-md-square me-4 rounded-circle d-none d-lg-inline-flex" data-bs-toggle="modal" data-bs-target="#searchModal"><i className="fas fa-search" /></button>
                                 <a href className="btn btn-primary py-2 px-4 d-none d-xl-inline-block rounded-pill">Book Now</a>

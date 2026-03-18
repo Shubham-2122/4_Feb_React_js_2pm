@@ -1,9 +1,27 @@
-import React from 'react'
+import React, { useEffect, useState } from 'react'
 import Header from '../Coman/Header'
 import Heros from '../Coman/Heros'
 import Footer from '../Coman/Footer'
+import axios from 'axios'
 
 function Service() {
+
+    const [service, setservice] = useState([])
+
+    useEffect(() => {
+        fetchdata()
+    }, [])
+
+    const fetchdata = async () => {
+        try {
+            const res = await axios.get("https://returent-backend.onrender.com/api/services")
+            console.log(res.data.data)
+            setservice(res.data.data)
+        } catch (error) {
+            console.log("Api data not Found", error)
+        }
+    }
+
     return (
         <div>
             <Header />
@@ -17,102 +35,25 @@ function Service() {
                             <h1 className="display-5 mb-5">What We Offer</h1>
                         </div>
                         <div className="row g-4">
-                            <div className="col-lg-3 col-md-6 col-sm-12 wow bounceInUp" data-wow-delay="0.1s">
-                                <div className="bg-light rounded service-item">
-                                    <div className="service-content d-flex align-items-center justify-content-center p-4">
-                                        <div className="service-content-icon text-center">
-                                            <i className="fas fa-cheese fa-7x text-primary mb-4" />
-                                            <h4 className="mb-3">Wedding Services</h4>
-                                            <p className="mb-4">Contrary to popular belief, ipsum is not simply random.</p>
-                                            <a href="#" className="btn btn-primary px-4 py-2 rounded-pill">Read More</a>
+                            {
+                                service && service.map((data, index) => {
+                                    const {_id,title,description,icon} = data
+                                    return (
+                                        <div key={_id} className="col-lg-3 col-md-6 col-sm-12 wow bounceInUp" data-wow-delay="0.1s">
+                                            <div className="bg-light rounded service-item">
+                                                <div className="service-content d-flex align-items-center justify-content-center p-4">
+                                                    <div className="service-content-icon text-center">
+                                                        <i className={`${icon} fa-7x text-primary mb-4`} />
+                                                        <h4 className="mb-3">{title}</h4>
+                                                        <p className="mb-4">{description.slice(0,35)}...</p>
+                                                        <a href="#" className="btn btn-primary px-4 py-2 rounded-pill">Read More</a>
+                                                    </div>
+                                                </div>
+                                            </div>
                                         </div>
-                                    </div>
-                                </div>
-                            </div>
-                            <div className="col-lg-3 col-md-6 col-sm-12 wow bounceInUp" data-wow-delay="0.3s">
-                                <div className="bg-light rounded service-item">
-                                    <div className="service-content d-flex align-items-center justify-content-center p-4">
-                                        <div className="service-content-icon text-center">
-                                            <i className="fas fa-pizza-slice fa-7x text-primary mb-4" />
-                                            <h4 className="mb-3">Corporate Catering</h4>
-                                            <p className="mb-4">Contrary to popular belief, ipsum is not simply random.</p>
-                                            <a href="#" className="btn btn-primary px-4 py-2 rounded-pill">Read More</a>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                            <div className="col-lg-3 col-md-6 col-sm-12 wow bounceInUp" data-wow-delay="0.5s">
-                                <div className="bg-light rounded service-item">
-                                    <div className="service-content d-flex align-items-center justify-content-center p-4">
-                                        <div className="service-content-icon text-center">
-                                            <i className="fas fa-hotdog fa-7x text-primary mb-4" />
-                                            <h4 className="mb-3">Cocktail Reception</h4>
-                                            <p className="mb-4">Contrary to popular belief, ipsum is not simply random.</p>
-                                            <a href="#" className="btn btn-primary px-4 py-2 rounded-pill">Read More</a>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                            <div className="col-lg-3 col-md-6 col-sm-12 wow bounceInUp" data-wow-delay="0.7s">
-                                <div className="bg-light rounded service-item">
-                                    <div className="service-content d-flex align-items-center justify-content-center p-4">
-                                        <div className="service-content-icon text-center">
-                                            <i className="fas fa-hamburger fa-7x text-primary mb-4" />
-                                            <h4 className="mb-3">Bento Catering</h4>
-                                            <p className="mb-4">Contrary to popular belief, ipsum is not simply random.</p>
-                                            <a href="#" className="btn btn-primary px-4 py-2 rounded-pill">Read More</a>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                            <div className="col-lg-3 col-md-6 col-sm-12 wow bounceInUp" data-wow-delay="0.1s">
-                                <div className="bg-light rounded service-item">
-                                    <div className="service-content d-flex align-items-center justify-content-center p-4">
-                                        <div className="service-content-icon text-center">
-                                            <i className="fas fa-wine-glass-alt fa-7x text-primary mb-4" />
-                                            <h4 className="mb-3">Pub Party</h4>
-                                            <p className="mb-4">Contrary to popular belief, ipsum is not simply random.</p>
-                                            <a href="#" className="btn btn-primary px-4 py-2 rounded-pill">Read More</a>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                            <div className="col-lg-3 col-md-6 col-sm-12 wow bounceInUp" data-wow-delay="0.3s">
-                                <div className="bg-light rounded service-item">
-                                    <div className="service-content d-flex align-items-center justify-content-center p-4">
-                                        <div className="service-content-icon text-center">
-                                            <i className="fas fa-walking fa-7x text-primary mb-4" />
-                                            <h4 className="mb-3">Home Delivery</h4>
-                                            <p className="mb-4">Contrary to popular belief, ipsum is not simply random.</p>
-                                            <a href="#" className="btn btn-primary px-4 py-2 rounded-pill">Read More</a>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                            <div className="col-lg-3 col-md-6 col-sm-12 wow bounceInUp" data-wow-delay="0.5s">
-                                <div className="bg-light rounded service-item">
-                                    <div className="service-content d-flex align-items-center justify-content-center p-4">
-                                        <div className="service-content-icon text-center">
-                                            <i className="fas fa-wheelchair fa-7x text-primary mb-4" />
-                                            <h4 className="mb-3">Sit-down Catering</h4>
-                                            <p className="mb-4">Contrary to popular belief, ipsum is not simply random.</p>
-                                            <a href="#" className="btn btn-primary px-4 py-2 rounded-pill">Read More</a>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                            <div className="col-lg-3 col-md-6 col-sm-12 wow bounceInUp" data-wow-delay="0.7s">
-                                <div className="bg-light rounded service-item">
-                                    <div className="service-content d-flex align-items-center justify-content-center p-4">
-                                        <div className="service-content-icon text-center">
-                                            <i className="fas fa-utensils fa-7x text-primary mb-4" />
-                                            <h4 className="mb-3">Buffet Catering</h4>
-                                            <p className="mb-4">Contrary to popular belief, ipsum is not simply random.</p>
-                                            <a href="#" className="btn btn-primary px-4 py-2 rounded-pill">Read More</a>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
+                                    )
+                                })
+                            }
                         </div>
                     </div>
                 </div>
