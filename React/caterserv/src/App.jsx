@@ -13,6 +13,8 @@ import Team from './Webiste/Pages/Team'
 import Testi from './Webiste/Pages/Testi'
 import Dashboard from './Admin/Apages/Dashboard'
 import ServiceMange from './Admin/Apages/ServiceMange'
+import EventManage from './Admin/Apages/EventManage'
+import MenuManage from './Admin/Apages/MenuManage'
 
 function App() {
   return (
@@ -39,6 +41,8 @@ function App() {
 
           <Route path='/dash' element={<Dashboard />} />
            <Route path='/servicemange' element={<ServiceMange />} />
+            <Route path='/eventsmange' element={<EventManage />} />
+            <Route path='/menusmange' element={<MenuManage />} />
 
         </Routes>
       </div>
