@@ -33,12 +33,12 @@ function Events() {
         }
     }
 
-    // 🔥 Reusable map function
+
     const renderEvents = () => {
         return filtered.map((data) => (
             <div key={data._id} className="col-md-6 col-lg-3 wow bounceInUp">
                 <div className="event-img position-relative">
-                    <img className="img-fluid rounded w-100" src={data.img} alt="" />
+                    <img className="img-fluid rounded w-100" style={{width:"400px",height:"300px"}} src={data.img} alt="" />
                     <div className="event-overlay d-flex flex-column p-4">
                         <h4 className="me-auto">{data.category}</h4>
                         <a href="#" className="my-auto">

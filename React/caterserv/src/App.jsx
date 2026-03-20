@@ -15,6 +15,7 @@ import Dashboard from './Admin/Apages/Dashboard'
 import ServiceMange from './Admin/Apages/ServiceMange'
 import EventManage from './Admin/Apages/EventManage'
 import MenuManage from './Admin/Apages/MenuManage'
+import EventAdd from './Admin/Apages/EventAdd'
 
 function App() {
   return (
@@ -40,9 +41,10 @@ function App() {
           {/* Admin Routes */}
 
           <Route path='/dash' element={<Dashboard />} />
-           <Route path='/servicemange' element={<ServiceMange />} />
-            <Route path='/eventsmange' element={<EventManage />} />
-            <Route path='/menusmange' element={<MenuManage />} />
+          <Route path='/servicemange' element={<ServiceMange />} />
+          <Route path='/eventsmange' element={<EventManage />} />
+          <Route path='/menusmange' element={<MenuManage />} />
+          <Route path='/eventadd' element={<EventAdd />} />
 
         </Routes>
       </div>

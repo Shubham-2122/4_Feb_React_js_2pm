@@ -20,7 +20,15 @@ function Aheader() {
                                     {/* <NavLink to="/" className="nav-item nav-link ">Home</NavLink> */}
                                     {/* <NavLink to="/about" className="nav-item nav-link">About</NavLink> */}
                                     <NavLink to="/servicemange" className="nav-item nav-link">Services</NavLink>
-                                    <NavLink to="/eventsmange" className="nav-item nav-link">Events</NavLink>
+                                    
+                                     <div className="nav-item dropdown">
+                                        <a href="#" className="nav-link dropdown-toggle" data-bs-toggle="dropdown">Events</a>
+                                        <div className="dropdown-menu bg-light">
+                                            <NavLink to="/eventsmange" className="dropdown-item">Manage</NavLink>
+                                            <NavLink to="/eventadd" className="dropdown-item">Add Form</NavLink>
+                                        
+                                        </div>
+                                    </div>
                                     <NavLink to="/menusmange" className="nav-item nav-link">Menu</NavLink>
                                     <div className="nav-item dropdown">
                                         <a href="#" className="nav-link dropdown-toggle" data-bs-toggle="dropdown">Pages</a>
