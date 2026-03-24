@@ -6,18 +6,20 @@ import { useNavigate } from 'react-router-dom'
 
 function EventAdd() {
 
-    const redirect =useNavigate()
+    const redirect = useNavigate()
+
+    
 
     const [form, setform] = useState({
-        image: "",
+        img: "",
         category: ""
     })
 
     const getchange = (e) => {
-        if (e.target.name === "image") {
+        if (e.target.name === "img") {
             setform({
                 ...form,
-                image: e.target.files[0]
+                img: e.target.files[0]
             });
         } else {
             setform({
@@ -36,14 +38,14 @@ function EventAdd() {
                 return false
             }
 
-            const res = await axios.post("https://returent-backend.onrender.com/api/events", form,{
-                 headers: {
+            const res = await axios.post("https://returent-backend.onrender.com/api/events", form, {
+                headers: {
                     "Content-Type": "multipart/form-data"
                 }
             })
             console.log(res.data)
             setform({
-                image: "",
+                img: "",
                 category: ""
             })
             console.log("Events Add Successfully")
@@ -68,7 +70,7 @@ function EventAdd() {
                             <div className="col-md-6 mx-auto col-lg-7">
 
                                 <form onSubmit={EventSubmit}>
-                                    <input name='image' onChange={getchange} type="file" className="w-100 form-control p-3 mb-4 border-primary bg-light" placeholder="Your Name" />
+                                    <input name='img' onChange={getchange} type="file" className="w-100 form-control p-3 mb-4 border-primary bg-light" placeholder="Your Name" />
                                     <select value={form.category} name='category' onChange={getchange} className="form-select border-primary w-100 p-3 mb-4" aria-label="Default select example">
                                         <option disabled>Select category</option>
                                         <option value="Wedding">Wedding</option>
