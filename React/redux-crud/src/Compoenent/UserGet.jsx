@@ -1,25 +1,21 @@
 import React, { useEffect } from 'react'
-import { useDispatch, useSelector } from 'react-redux'
-import { readuser } from '../Slice/userSlice'
+import { useDeleteUserMutation, useGetUsersQuery } from '../Slice/userApi'
+// import { useDispatch, useSelector } from 'react-redux'
+// import { readuser } from '../Slice/userSlice'
 
 function UserGet() {
 
-    const { loading, users } = useSelector((state) => state.users)
-    console.log(loading)
-    console.log(users)
+    const {data:users = [],error, isLoading} =  useGetUsersQuery();
+    console.log(isLoading)
 
-    const dispatch = useDispatch()
-
-    useEffect(() => {
-        dispatch(readuser())
-    }, [])
+    const [deleteUser] = useDeleteUserMutation()
 
     return (
         <div>
 
             <div className="container">
                 <h1>hello this User Table show</h1>
-                <table class="table table-dark table-hover">
+                <table className="table table-dark table-hover">
                     <thead>
                         <tr className='text-center'>
                             <th scope="col">#id</th>
@@ -41,7 +37,7 @@ function UserGet() {
                                         <td>
                                             <button className='btn btn-info'>View</button>
                                             <button className='btn btn-success mx-2'>Edit</button>
-                                            <button className='btn btn-danger'>Delete</button>
+                                            <button className='btn btn-danger' onClick={()=>deleteUser(data.id)}>Delete</button>
                                         </td>
                                     </tr>
                                 )

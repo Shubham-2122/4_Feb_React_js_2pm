@@ -1,9 +1,8 @@
 import React, { useState } from 'react'
-import { useDispatch } from 'react-redux'
-import { createuser } from '../Slice/userSlice'
 import { useNavigate } from 'react-router-dom'
+import { useCreateUserMutation } from '../Slice/userApi'
 
-function AddUser() {
+function UserData() {
 
     const redirect = useNavigate()
 
@@ -18,27 +17,37 @@ function AddUser() {
     const getchnage = (e) => {
         setform({
             ...form,
-            // id: new Date().getTime().toString(),
+            id: new Date().getTime().toString(),
             [e.target.name]: e.target.value
         })
         console.log(form)
     }
 
-    const dispatch = useDispatch()
+    const [createuser, { isLoading, isSuccess, error }] = useCreateUserMutation();
 
     const getSubmit = (e) => {
-        e.preventDefault()
+        e.preventDefault();
 
-        dispatch(createuser(form))
-        setform({
-            
-            name: "",
-            email: "",
-            password: "",
-            gender: ""
-        })
-        redirect("/")
-    }
+        try {
+            createuser(form); // send data
+
+            alert("User Added ✅");
+
+            // reset form
+            setform({
+                name: "",
+                email: "",
+                gender: "",
+                password: "",
+            });
+            redirect("/")
+
+        } catch (err) {
+            console.log(err);
+        }
+    };
+
+
 
     return (
         <div>
@@ -74,4 +83,4 @@ function AddUser() {
     )
 }
 
-export default AddUser
+export default UserData
